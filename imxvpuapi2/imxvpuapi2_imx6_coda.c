@@ -3016,7 +3016,7 @@ ImxVpuApiEncReturnCodes imx_vpu_api_enc_open(ImxVpuApiEncoder **encoder, ImxVpuA
 	/* The encoder requires an 8-pixel aligned width. Otherwise, corrupted frames are produced. */
 	fb_metrics->aligned_frame_width = IMX_VPU_API_ALIGN_VAL_TO(fb_metrics->actual_frame_width, 32);
 	/* The VPU can actually handle a vertical 2-row alignment. */
-	fb_metrics->aligned_frame_height = IMX_VPU_API_ALIGN_VAL_TO(fb_metrics->actual_frame_height, 8);
+	fb_metrics->aligned_frame_height = IMX_VPU_API_ALIGN_VAL_TO(fb_metrics->actual_frame_height, 16);
 	fb_metrics->y_stride = fb_metrics->aligned_frame_width;
 	fb_metrics->y_size = fb_metrics->y_stride * fb_metrics->aligned_frame_height;
 
